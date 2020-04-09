@@ -1,0 +1,2 @@
+# Auditoriumticketbooking
+This is the project where i have made a prototype for ticket booking system. It can be used for movie ticket booking,bus ticket booking, train ticket booking. But since i have made it for my college project so i made the ticket booking system of my college auditorium using various library of c plus plus.I have used the concept of inheritence, constructor and file handling.
