@@ -2,52 +2,58 @@
 #include<conio.h>                  
 #include<fstream>
 using namespace std;
+
 class allocation
 {
-	int Press,seat,number,i,j,a;
+	int Press, seat, number, i, j, a;
 	char name[30];
    public:
-   void bookingseat();
-   void seatavailable();
+	void bookingseat();
+   	void seatavailable();
 };
+
 void allocation::bookingseat()
-   {  
-   int num,b=0,c=0;
-   ofstream outf("allocation.txt",ios::app);
-	cout<<"How many seat you want to book";
-	outf<<"\nHow many seat you want to book";
-	cin>> seat;
-    outf<<" "<< seat;
-	outf<<"Enter the seat number you wish to book";
-	for(i=1;i<=seat;i++)
-		{
-	        cout<<"Enter the seat"<<i<<" number you wish to book";
-	        cin>>a;
-	        outf<<"\nEnter the seat"<<i<<" number you wish to book";
-	        outf<<" "<< a;
-		}
-	cout<<"From which name you wish to book";
-	outf<<"\nFrom which name you wish to book";
-	cin>> name;
-	outf<<" "<< name;
-	cout<<"Congratulation your seat are booked.";
+{  
+	int num, b=0, c=0;
+   	ofstream outf("allocation.txt", ios::app);
+	cout << "How many seat you want to book";
+	outf << "\nHow many seat you want to book";
+	cin >> seat;
+    	outf << " " << seat;
+	outf << "Enter the seat number you wish to book";
+	
+	for (i=1; i<=seat; i++)
+	{
+	        cout << "Enter the seat" << i << " number you wish to book";
+	        cin >> a;
+	        outf << "\nEnter the seat" << i << " number you wish to book";
+	        outf << " " << a;
+	}
+	
+	cout << "From which name you wish to book";
+	outf << "\nFrom which name you wish to book";
+	cin >> name;
+	outf << " " << name;
+	cout << "Congratulation your seat are booked.";
 	outf.close();
    }
   
-int b=100;
+int b = 100;
+
 void allocation::seatavailable()
 {
 	ofstream outf;
-	outf.open("allocation.txt",ios::app);
-	int m,n,u=0;
-	n=u+seat;
-	m=b-n;
-	cout<<"Seat are available :"<<m;
-	outf<<"\n Seat are available :"<<m;
-	a=n;
-	b=m;
+	outf.open("allocation.txt", ios::app);
+	int m, n, u=0;
+	n = u+seat;
+	m = b-n;
+	cout << "Seat are available :" << m;
+	outf << "\n Seat are available :" << m;
+	a = n;
+	b = m;
 	outf.close();
 }
+
 class SEAT
 {
 	int row,col;
