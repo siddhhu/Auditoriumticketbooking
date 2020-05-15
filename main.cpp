@@ -134,14 +134,14 @@ int main()
 {
 	SEAT c;
 	char select;
-	cout<<"\tSEAT ALLOCATION PROGRAM OF AUDITORIUM"<<endl;
-	cout<<"\t\tPER SEAT RATE: Rs50"<<endl;
+	cout << "\tSEAT ALLOCATION PROGRAM OF AUDITORIUM" << endl;
+	cout << "\t\tPER SEAT RATE: Rs50" << endl;
 	do
 	{
 		c.book();
-		cout<<"Do you wish to booking seat again(Y/N):\t";
-		cin>>select;
-    }
-    while(select=='Y'||select=='y');
+		cout << "Do you wish to booking seat again(Y/N):\t";
+		cin >> select;
+    	}
+    	while (select=='Y'||select=='y');
 	getch();
 }
